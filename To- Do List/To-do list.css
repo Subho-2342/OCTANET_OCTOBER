@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Roboto:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo Bhai 2', sans-serif;
+    flex-wrap: wrap;
+}
+
+body {
+    min-height: 100vh;
+    background: url('https://w0.peakpx.com/wallpaper/299/908/HD-wallpaper-red-nature.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20pt 0;
+}
+
+#listarea {
+    border: 1pt solid #ffffff21;
+    background: #ffffff09;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 40vw;
+    min-height: 90vh;
+}
+
+#box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1pt solid #ffffff21;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+input {
+    width: 95%;
+    background: #ffffff09;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    outline: none;
+    color: #fff;
+    height: 20pt;
+    border: none;
+    padding: 0 0 0 5pt;
+}
+
+#box button {
+    width: 5%;
+    height: 20pt;
+    outline: none;
+    background: #ffffff09;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#box button:active,
+input:focus {
+    background: #ffffff1c;
+}
+
+.task {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: #ffffff1c;
+    border: 1pt solid #ffffff21;
+    height: 50pt;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #fff;
+    position: relative;
+    width: 100%;
+}
+
+.task button {
+    background: #ffffff2f;
+    border: 1pt solid #ffffff21;
+    width: 30pt;
+    height: 30pt;
+    cursor: pointer;
+    color: #fff;
+}
+
+.task button:active {
+    background: #ffffff53;
+}
+
+.btnsec {
+    width: 80pt;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btnsec button {
+    font-weight: bolder;
+    font-size: 20pt;
+}
+
+.btnsec button:nth-child(1):active {
+    color: #0f0;
+}
+
+.btnsec button:nth-child(2):active {
+    color: #f00;
+}
+
+.task p {
+    position: relative;
+    transition: all 0.3s ease-in;
+}
+
+.task p::before {
+    content: '';
+    position: absolute;
+    top: 49%;
+    left: -5%;
+    background: #0f0;
+    width: 0;
+    height: 1.5pt;
+    transition: all 0.3s ease-in;
+}
+
+.done {
+    color: #0f0 !important;
+}
+
+.done::before {
+    width: 110% !important;
+}
+
+.dt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 5pt;
+    width: 80pt;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dt.hidden {
+    display: none;
+}
+
+
+
+#descont {
+    width: 75%;
+    display: flex;
+    overflow: hidden;
+}
+
+.donebtn {
+    transition: 0.3s ease;
+}
+
+#dtbtn {
+    position: absolute;
+    top: 5pt;
+    left: 5pt;
+    width: 55pt;
+    height: 25pt;
+    border: 1pt solid #ffffff21;
+    background: #ffffff1a;
+    border-radius: 50pt;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#dtbtn span {
+    position: relative;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+#dtbtn span::before {
+    content: '';
+    position: absolute;
+    top: 2pt;
+    left: 2pt;
+    height: 20pt;
+    width: 20pt;
+    border-radius: 100%;
+    background: #ffffffbd;
+    transition: all 0.3s ease;
+}
+
+.active {
+    box-shadow: 0 0 10pt #0ff,
+    0 0 20pt #0ff,
+    0 0 30pt #00f,
+    0 0 40pt #00f !important;
+}
+
+.active span::before {
+    left: 60% !important;
+    background: #0ff !important;
+    box-shadow: 0 0 5px #0ff,
+    0 0 10px #0ff,
+    0 0 20px #0ff;
+}
+
+#dtd {
+    color: #fff;
+    position: absolute;
+    top: 8pt;
+    left: 70pt;
+}
